@@ -1,0 +1,62 @@
+# Arquivos e diretórios do sistema
+.DS_Store
+Thumbs.db
+
+# Diretórios de dependências
+node_modules/
+vendor/
+
+# Arquivos de ambiente
+.env
+.env.local
+.env.*.local
+
+# Arquivos de build
+dist/
+build/
+
+# Arquivos de log
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Arquivos temporários
+*.tmp
+*.swp
+*.swo
+
+# Arquivos de IDE e editores
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Arquivos de cache
+.cache/
+
+# Arquivos específicos de frameworks/bibliotecas (adicione conforme necessário)
+# Ex: para React
+# .next/
+
+# Arquivos de configuração local
+*.local
+
+# Arquivos de backup
+*.bak
+*.backup
+
+# Arquivos de mídia (caso não queira versioná-los)
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.svg
+*.mp4
+*.webm
+*.ogg
+
+# Outros arquivos que você pode querer ignorar
+*.pdf
+*.zip
+*.rar
