@@ -120,6 +120,24 @@ body {
   user-select: none;
 }
 
+.button#hide-button {
+  padding: 0;
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  cursor: default;
+  bottom: 0;
+  right: 1%;
+}
+
+.button#hide-button:hover {
+  font-size: 1.5em;
+}
+
+.button#hide-button:active {
+  font-size: 1.4em;
+}
+
 .button#mal-button:hover {
   background-color: var(--mal-color);
   border-radius: 2px;
@@ -231,6 +249,9 @@ body {
     background-color: var(--color-primary);
     font-size: 1em;
   }
+  .button#hide-button {
+    display: none;
+  }
   .profile-page {
     width: 100%;
     height: 100%;
@@ -301,6 +322,7 @@ body {
     font-size: 1em;
   }
   .main-page {
+    display: flex !important;
     width: 100%;
     height: 100%;
   }
@@ -339,5 +361,9 @@ body {
     width: 100%;
     height: 20%;
    object-fit: cover;
+  }
+
+  .button#hide-button {
+    display: none;
   }
 }

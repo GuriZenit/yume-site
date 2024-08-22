@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const mobileBackground = document.querySelector(".mobile-background");
   const stopButton = document.getElementById("bgm-stop-button");
   const playButton = document.getElementById("play-button");
+  const hideButton = document.getElementById("hide-button");
+  const mainPage = document.querySelector(".main-page");
   const bgmInfo = document.querySelectorAll(".bgm-info");
   const bgmTitle = document.getElementById("bgm-title");
   const gif = document.querySelector(".middle-gif");
@@ -53,4 +55,11 @@ document.addEventListener("DOMContentLoaded", function () {
   stopButton.addEventListener("click", function () {
     audio.pause();
   });
+
+  const hideMainPage = () => {
+    mainPage.style.display = mainPage.style.display === "none" ? "flex" : "none";
+  };
+
+  hideButton.addEventListener("mouseenter", hideMainPage);
+  hideButton.addEventListener("mouseleave", hideMainPage);
 });
