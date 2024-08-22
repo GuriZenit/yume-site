@@ -1,0 +1,165 @@
+@font-face {
+  font-family: "Cutive Mono";
+  src: url("../fonts/CutiveMono-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Jersey25";
+  src: url("../fonts/Jersey25-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --color-primary: #242422;
+  --font-color: #cfcfcf;
+  --mal-color: #193968;
+  --github-color: #24282f;
+}
+
+html,
+body {
+  background-image: url("../img/background-1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-page {
+  background-color: var(--color-primary);
+  height: 100vh;
+  width: 1060px;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.profile-page {
+  margin: 10px;
+  padding: 10px;
+  height: 25%;
+  display: flex;
+  flex-direction: row;
+}
+.profile-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: auto;
+  aspect-ratio: 1 / 1;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 10px;
+}
+
+.profile-info-header {
+  font-family: "Cutive Mono";
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-info-header h1 {
+  color: var(--font-color);
+  font-size: 2.5em;
+  margin: 0;
+  padding: 0;
+}
+
+.profile-info-header p {
+  margin: 0;
+  margin-top: 5px;
+  color: var(--font-color);
+  font-size: 1.1em;
+}
+
+.profile-buttons {
+  display: grid;
+  grid-template-columns: 0.1fr 0.1fr;
+  gap: 10px;
+}
+
+.button {
+  font-family: "Jersey25";
+  color: var(--font-color);
+  text-decoration: none;
+  font-size: 1.1em;
+  padding: 10px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.button#mal-button:hover {
+  background-color: var(--mal-color);
+  border-radius: 2px;
+}
+
+.button#github-button:hover {
+  background-color: var(--github-color);
+  border-radius: 2px;
+}
+.button#github-button:active,
+.button#mal-button:active {
+  padding: 7px;
+}
+
+.middle-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image {
+  width: 80%;
+  border: 5px solid #242422;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.button#play-button {
+  align-self: center;
+  text-align: center;
+  font-size: 3em;
+}
+
+#play-button:active {
+  background-color: var(--color-secondary);
+}
+
+.footer-page {
+  font-family: "Cutive Mono";
+  font-size: 1.1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.bgm-info {
+  color: var(--font-color);
+  margin: 0;
+  padding: 0;
+}
+
+.bgm-info#artist-name {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.bgm-info#artist-name:hover {
+  color: var(--mal-color);
+}
