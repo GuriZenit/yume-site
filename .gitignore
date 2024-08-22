@@ -49,7 +49,6 @@ yarn-error.log*
 # Media files (if you don't want to version them)
 *.jpg
 *.jpeg
-*.svg
 *.mp4
 *.webm
 
