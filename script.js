@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
   const mobileBackground = document.querySelector(".mobile-background");
+  const nextButton = document.getElementById("bgm-next-button");
   const stopButton = document.getElementById("bgm-stop-button");
+  const prevButton = document.getElementById("bgm-prev-button");
   const playButton = document.getElementById("play-button");
   const hideButton = document.getElementById("hide-button");
   const mainPage = document.querySelector(".main-page");
@@ -20,12 +22,16 @@ document.addEventListener("DOMContentLoaded", function () {
     "それで、どっちからきたっけ",
     "ひなたぼっこ",
   ];
-  const randomTheme = Math.floor(Math.random() * songNames.length);
+  let randomTheme = Math.floor(Math.random() * songNames.length);
 
-  mobileBackground.src = `assets/img/background-${randomTheme}.png`;
-  bgmTitle.innerText = `Song: ${songNames[randomTheme]}`;
-  audio.lastElementChild.src = `assets/audio/song-${randomTheme}.ogg`;
-  body.style.backgroundImage = `url(assets/img/background-${randomTheme}.png)`;
+  const setTheme = (theme) => {
+    mobileBackground.src = `assets/img/background-${theme}.png`;
+    bgmTitle.innerText = `${songNames[theme]}`;
+    audio.lastElementChild.src = `assets/audio/song-${theme}.ogg`;
+    body.style.backgroundImage = `url(assets/img/background-${theme}.png)`;
+  };
+
+  setTheme(randomTheme);
 
   audio.load();
 
@@ -37,6 +43,8 @@ document.addEventListener("DOMContentLoaded", function () {
     playButton.style.display = "none";
     gif.style.display = "block";
     stopButton.style.display = "block";
+    prevButton.style.display = "block";
+    nextButton.style.display = "block";
     bgmInfo.forEach(function (info) {
       info.style.display = "block";
     });
@@ -50,6 +58,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const audioEnded = function () {
     audio.currentTime = 0;
     stopButton.style.display = "none";
+    nextButton.style.display = "none";
+    prevButton.style.display = "none";
     playButton.style.display = "block";
     gif.style.display = "none";
     bgmInfo.forEach(function (info) {
@@ -57,8 +67,27 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   };
 
+  const nextSong = () => {
+    randomTheme = (randomTheme + 1) % songNames.length;
+    setTheme(randomTheme);
+
+    audio.load();
+    audio.play();
+  };
+
+  const prevSong = () => {
+    randomTheme = (randomTheme - 1 + songNames.length) % songNames.length;
+    setTheme(randomTheme);
+
+    audio.load();
+    audio.play();
+  };
+
+  nextButton.addEventListener("click", nextSong);
+  prevButton.addEventListener("click", prevSong);
   audio.addEventListener("ended", audioEnded);
   audio.addEventListener("pause", audioEnded);
+
 
   stopButton.addEventListener("click", function () {
     audio.pause();

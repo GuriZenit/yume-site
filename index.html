@@ -52,6 +52,14 @@
       </div>
       <div class="footer-page">
         <p class="bgm-info" id="bgm-title" style="display: none"></p>
+        <audio id="bgm" loop hidden>
+          <source id="bgm-source" type="audio/ogg" />
+        </audio>
+        <div class="bgm-buttons">
+          <a class="button" id="bgm-prev-button">PREV</a>
+          <a class="button" id="bgm-stop-button">STOP</a>
+          <a class="button" id="bgm-next-button">NEXT</a>
+        </div>
         <a
           class="bgm-info"
           href="https://www.youtube.com/@Gobou0san"
@@ -59,10 +67,6 @@
           style="display: none"
           >Animation: Gobou-san</a
         >
-        <audio id="bgm" loop hidden>
-          <source id="bgm-source" type="audio/ogg" />
-        </audio>
-        <a class="button" id="bgm-stop-button">STOP</a>
       </div>
     </div>
     <button class="button" id="hide-button" title="Show/Hide">◩</button>

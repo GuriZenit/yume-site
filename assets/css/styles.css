@@ -120,6 +120,12 @@ body {
   user-select: none;
 }
 
+.bgm-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
 .button#hide-button {
   padding: 0;
   position: absolute;
@@ -203,15 +209,21 @@ body {
   color: var(--mal-color);
 }
 
-.button#bgm-stop-button {
+.button#bgm-stop-button,
+.button#bgm-next-button,
+.button#bgm-prev-button {
   display: none;
   font-size: 1.1em;
 }
 
-.button#bgm-stop-button:hover {
+.button#bgm-stop-button:hover,
+.button#bgm-next-button:hover,
+.button#bgm-prev-button:hover {
   font-size: 1.2em;
 }
-.button#bgm-stop-button:active {
+.button#bgm-stop-button:active,
+.button#bgm-next-button:active,
+.button#bgm-prev-button:active {
   font-size: 1.1em;
 }
 
@@ -260,17 +272,31 @@ body {
     justify-content: center;
     box-sizing: border-box;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-
   }
   .profile-buttons {
     position: absolute;
     bottom: 2%;
     left: 2%;
   }
-  .button#bgm-stop-button {
+  .bgm-buttons {
     position: absolute;
     bottom: 2%;
     right: 2%;
+  }
+  .button#bgm-stop-button,
+  .button#bgm-next-button,
+  .button#bgm-prev-button {
+    font-size: 0.8em;
+  }
+  .button#bgm-stop-button:hover,
+  .button#bgm-next-button:hover,
+  .button#bgm-prev-button:hover {
+    font-size: 0.8em;
+  }
+  .button#bgm-stop-button:active,
+  .button#bgm-next-button:active,
+  .button#bgm-prev-button:active {
+    font-size: 0.7em;
   }
   .middle-page {
     width: 0px;
@@ -293,9 +319,9 @@ body {
   .middle-gif {
     display: none !important;
   }
- .footer-page {
+  .footer-page {
     width: 0%;
-  } 
+  }
   .bgm-info {
     position: absolute;
     top: 0;
@@ -308,14 +334,14 @@ body {
   }
 
   .bgm-info#artist-name {
-    display: none!important;
+    display: none !important;
   }
 }
 
 /* Mobile */
 @media (max-width: 600px) and (min-height: 500px) {
   body {
-    background-image: none!important;
+    background-image: none !important;
     background-color: var(--color-primary);
   }
   .button {
@@ -360,7 +386,7 @@ body {
     display: block !important;
     width: 100%;
     height: 20%;
-   object-fit: cover;
+    object-fit: cover;
   }
 
   .button#hide-button {
