@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const gif = document.querySelector(".image");
+  const gif = document.querySelector(".middle-gif");
   const playButton = document.getElementById("play-button");
   const audio = document.getElementById("bgm");
   const bgmInfo = document.querySelectorAll(".bgm-info");
