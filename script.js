@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const audio = document.getElementById("bgm");
   const bgmInfo = document.querySelectorAll(".bgm-info");
 
-  playButton.addEventListener("click", function () {
+  playButton.addEventListener("click", async function () {
     audio.play().catch(function (error) {
       console.log("Autoplay was prevented:", error);
     });
@@ -21,11 +21,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  audio.addEventListener("ended", function () {
+
+  const audioEnded = function () {
+    audio.currentTime = 0;
     playButton.style.display = "block";
     gif.style.display = "none";
     bgmInfo.forEach(function (info) {
       info.style.display = "none";
     });
-  });
+  };
+
+  audio.addEventListener("ended", audioEnded);
+  audio.addEventListener("pause", audioEnded);
 });

@@ -135,8 +135,12 @@ body {
   font-size: 3em;
 }
 
+#play-button:hover {
+  font-size: 3.5em;
+}
 #play-button:active {
-  background-color: var(--color-secondary);
+  font-size: 2.5em;
+  transition: 0.1s;
 }
 
 .footer-page {
