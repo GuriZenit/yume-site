@@ -37,10 +37,10 @@ body {
 
 body {
   background-color: var(--color-primary);
-  background-image: var(--background-image);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  width: 100%;
 }
 
 .main-page {
@@ -296,7 +296,6 @@ body {
   body {
     background-image: none!important;
     background-color: var(--color-primary);
-    width: 100%;
   }
   .button {
     font-size: 1em;
