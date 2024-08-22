@@ -9,35 +9,43 @@ document.addEventListener("DOMContentLoaded", function () {
   const gif = document.querySelector(".middle-gif");
   const body = document.querySelector("body");
   const audio = document.getElementById("bgm");
-  
-  const songNames = ["なつかしいうた", "とりはそと、おにはうち", "The End"]
+
+  const songNames = [
+    "なつかしいうた",
+    "とりはそと、おにはうち",
+    "The End",
+    "さむくてあったかい、ふゆ〜雪の世界〜",
+    "ゆめのはじまり",
+    "FEVER",
+    "それで、どっちからきたっけ",
+    "ひなたぼっこ",
+  ];
   const randomTheme = Math.floor(Math.random() * songNames.length);
 
   mobileBackground.src = `assets/img/background-${randomTheme}.png`;
   bgmTitle.innerText = `Song: ${songNames[randomTheme]}`;
   audio.lastElementChild.src = `assets/audio/song-${randomTheme}.ogg`;
   body.style.backgroundImage = `url(assets/img/background-${randomTheme}.png)`;
-  
+
   audio.load();
-  
+
   playButton.addEventListener("click", async function () {
     audio.play().catch(function (error) {
       console.log("Autoplay was prevented:", error);
     });
-    
+
     playButton.style.display = "none";
     gif.style.display = "block";
     stopButton.style.display = "block";
     bgmInfo.forEach(function (info) {
       info.style.display = "block";
     });
-    
+
     gif.animate([{ opacity: 0 }, { opacity: 1 }], {
       duration: 1000,
       fill: "forwards",
     });
   });
-  
 
   const audioEnded = function () {
     audio.currentTime = 0;
@@ -57,7 +65,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   const hideMainPage = () => {
-    mainPage.style.display = mainPage.style.display === "none" ? "flex" : "none";
+    mainPage.style.display =
+      mainPage.style.display === "none" ? "flex" : "none";
   };
 
   hideButton.addEventListener("mouseenter", hideMainPage);
