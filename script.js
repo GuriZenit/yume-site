@@ -85,12 +85,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   nextButton.addEventListener("click", nextSong);
   prevButton.addEventListener("click", prevSong);
-  audio.addEventListener("ended", audioEnded);
-  audio.addEventListener("pause", audioEnded);
+  audio.addEventListener("ended", nextSong);
 
 
   stopButton.addEventListener("click", function () {
     audio.pause();
+    audioEnded();
   });
 
   const hideMainPage = () => {
