@@ -4,12 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/styles.css" />
-    <script src="script.js"></script>
     <title>GuriZenit</title>
   </head>
   <body>
     <img
-      class="mobile-background-image"
+      class="mobile-background"
       src="assets/img/background-1.png"
       alt="Background Image"
       style="display: none"
@@ -17,60 +16,61 @@
     <div class="main-page">
       <div class="profile-page">
         <img
-          class="profile-image"
-          src="https://www.gravatar.com/avatar/a2087d7427bd15a4986b8a02f12d2590c87e7f6fcf22de02489c305f98217b43?s=480&d=identicon"
-          alt="Profile Image"
+        class="profile-image"
+        src="https://www.gravatar.com/avatar/a2087d7427bd15a4986b8a02f12d2590c87e7f6fcf22de02489c305f98217b43?s=480&d=identicon"
+        alt="Profile Image"
         />
         <div class="profile-info">
           <div class="profile-info-header">
             <h1>GuriZenit</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit minus dolore natus omnis magnam! Quae quibusdam? </p>
+            <p>Something should be here, but what?</p>
           </div>
           <div class="profile-buttons">
             <a
-              class="button"
-              id="github-button"
-              href="https://github.com/GuriZenit"
-              >GitHub</a
+            class="button"
+            id="github-button"
+            href="https://github.com/GuriZenit"
+            >GitHub</a
             >
             <a
               class="button"
               id="mal-button"
               href="https://myanimelist.net/profile/GuriZenit"
               >MyAnimeList</a
-            >
+              >
+            </div>
           </div>
         </div>
-      </div>
-      <div class="middle-page">
-        <img
+        <div class="middle-page">
+          <img
           class="middle-gif"
           src="assets/img/yume.gif"
           style="display: none"
           alt="Image"
-        />
-        <a class="button" id="play-button">Play</a>
-      </div>
-      <div class="footer-page">
-        <p class="bgm-info" id="bgm-title" style="display: none">
-          Song: Yume Nikki OST - O-Man
-        </p>
-        <a
+          />
+          <a class="button" id="play-button">Play</a>
+        </div>
+        <div class="footer-page">
+          <p class="bgm-info" id="bgm-title" style="display: none">
+            Song: Yume Nikki OST - O-Man
+          </p>
+          <a
           class="bgm-info"
           href="https://www.youtube.com/@Gobou0san"
           id="artist-name"
           style="display: none"
-          >Artist: Gobou-san</a
-        >
-        <audio id="bgm" loop hidden>
-          <source
+          >Animation: Gobou-san</a
+          >
+          <audio id="bgm" loop hidden>
+            <source
             id="bgm-source"
             src="assets/audio/song-1.ogg"
             type="audio/ogg"
-          />
-        </audio>
-        <a class="button" id="bgm-stop-button">STOP</a>
+            />
+          </audio>
+          <a class="button" id="bgm-stop-button">STOP</a>
+        </div>
       </div>
-    </div>
+      <script src="script.js"></script>
   </body>
 </html>
