@@ -7,7 +7,7 @@ Yume is a personal profile site, I did it because I was bored, and I like the ga
 <div style="display: grid; grid-template-columns: repeat(1, 1fr); gap: 10px;">
   <h3>Desktop</h3>
   <div style="border: 1px solid #ccc; padding: 10px;">
-    <img src="assets/img/preview/desktop.png" alt="Preview Desktop" style="width: 100%; height: auto;" />
+    <img src="assets/img/preview/desktop.png" alt="Preview Desktop" style="width: auto; height: 411px;" />
   </div>
   <h3>Mobile</h3>
   <div style="display: flex; flex-direction: row; border: 1px solid #ccc; padding: 10px;">
